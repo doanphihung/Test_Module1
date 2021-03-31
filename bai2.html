@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, number) {
+        let i = 0;
+        while (i < arr.length) {
+            if (arr[i] === number) {
+                arr.splice(i, 1);
+            } else {
+                i++;
+            }
+        }
+        return arr;
+    }
+    let array = [1,2,3,4,5,2,3];
+    let a = 3;
+    console.log(tryRemoveFromArray(array, a));
+</script>
+
+</body>
+</html>

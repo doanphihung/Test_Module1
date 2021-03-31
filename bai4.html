@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<canvas id="circle" width="400" height="400" style="border: 1px solid black"></canvas>
+<script>
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+            this.canvas = document.getElementById('circle');
+            this.ctx = this.canvas.getContext('2d');
+        }
+        render() {
+            this.ctx.fillStyle = this.color;
+            this.ctx.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
+            this.ctx.fill();
+        }
+    }
+    let circle = new Circle(10, 10, 100, '#000000');
+    circle.render();
+</script>
+
+</body>
+</html>
